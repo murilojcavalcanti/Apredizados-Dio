@@ -1,0 +1,33 @@
+------------------------------------------------------COMO CONFIGURAR A CHAVE SSH NO GIT-------------------------------------------------------------------------------
+PASSO 1 - Abrir a aba ssh and GPG KEYS no git hub
+Passo 2 - Apos isso abrir o git bash
+Passo 3 - Apos abrir o git bash voce irá colocar o comando "ssh-keygen -t ed25519 -C email do github". apos rodar o codigo o terminal 
+           mostra a mensagem que foi gerado um par de chaves e o local onde o mesmo se encontra.
+Passo 4 - Apos mostrar a mensagem e você apertar "enter" o terminal pede para você colocar a sua senha. Apos colocar a senha ele gera a sua chave
+            mostrando onde ela está salva e o seu fingerprint.
+Passo 5 - Apos a chave ser gerada você irá entrar na pasta onde a chave se encontra usando o comando "cd /C/Users/nomedousuario/ .ssh".
+Passo 6 - Apos entrar na pasta você irá dar o comando "ls" para listar os arquivos da pasta, onde ele irá mostrar os arquivos da chave ssh.
+Passo 7 - Apos listar os arquivos você irá dar o comando "cat id_ed25519.pub" esse comando vai mostrar no terminal o conteudo que está dentro da pasta.
+Passo 8 - Depois de apresentado o conteudo do arquivo id_ed25519.pub (que é a chave ssh) você irá copiar o conteudo do arquivo mostrado no terminal. 
+Passo 9 - Voltando ao git hub na aba ssh and gpg keys voce irá dar algum titulo a chave e copiar o conteudo do arquivo id_ed25519.pub no espaço Key
+Passo 10 - Apos adicionar a chave o github pede a sua senha.
+Passo 11 - Depois de adicionar a chave ao github você vai voltar ao git para ativar o ssh agent.
+Passo 12 - Para ativar o ssh agent você deve primeiro escrever o comando "eval $(ssh-agent -s)". Para mostrar que deu certo o git mostra o agent pid do seu ssh agent
+Passo 13 - Apos ativar o ssh agent você deve adicionar a chave ao ssh agent escrevendo o comando "ssh-add id_ed25519". Apos isso ele irá pedir a senha da sua chave, 
+           depois de colocar a sua senha ele irá mostrar identity added: a chave ssh.
+
+
+-----------------------------------------COMO CLONAR UM REPOSITORIO DO GITHUB NA MINHA MAQUINA-------------------------------------------------------
+Passo 1 - Abrir o git hub e dentro do repositorio ir em code e copiar o caminho ssh
+Passo 2 - Abrir o git e escrever o codigo " git clone caminho ssh"
+Passo 3 - ele pedirá uma permisão para salvar no seu git. apenas coloque yes. e ele irá clonar.
+
+
+
+--------------------------------------------------COMO SUBIR UM CÓDIGO PARA O GITHUB------------------------------------------------------------------
+
+Passo 1 - abrir o git bash na pasta em que está o código
+Passo 2 - Apos abrir o git escrever o comando "git init" para inica o git na pasta
+Passo 3 - Apos inicializar o git na pasta voce deve inserir o comando "git remote add origin https://github.com/murilojcavalcanti/Apredizados-Dio.git" 
+esse comando vai apontar a sua pasta ao repositorio no github
+Passo 4 - 
